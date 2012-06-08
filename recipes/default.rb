@@ -25,8 +25,10 @@ if node[:system_ruby][:rbenv_version]
     global true
   end
 else
-  package node[:system_ruby][:package] do
-    action :install
-    version node[:system_ruby][:package_version]
+  node[:system_ruby][:packages].each do |pkg, version|
+    package pkg do
+      action :install
+      version version
+    end
   end
 end

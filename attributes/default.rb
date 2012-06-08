@@ -19,19 +19,32 @@
 # limitations under the License.
 #
 
+ruby ruby-libs ruby-devel ruby-docs ruby-ri ruby-irb ruby-rdoc ruby-mode rubygems
+
+
 case node[:platform]
 when "fedora"
-  default[:system_ruby][:package]         = "ruby"
-  default[:system_ruby][:package_version] = "1.9.3.194-10.1.fc17"
+  default[:system_ruby][:packages] = {
+    "ruby"       => "1.9.3.194-10.1.fc17",
+    "ruby-devel" => "1.9.3.194-10.1.fc17",
+    "rubygems"   => "1.8.24-1.fc17"
+  }
 when "centos", "redhat", "suse", "scientific", "amazon"
-  default[:system_ruby][:package]         = "ruby"
-  default[:system_ruby][:package_version] = "1.8.7.352-7.el6_2"
+  default[:system_ruby][:packages] = {
+    "ruby"       => "1.8.7.352-7.el6_2",
+    "ruby-devel" => "1.8.7.352-7.el6_2",
+    "rubygems"   => "1.3.7-1.el6"
+  }
 when "ubuntu"
-  default[:system_ruby][:package]         = "ruby1.9.1"
-  default[:system_ruby][:package_version] = "1.9.3.0-1ubuntu1"
+  default[:system_ruby][:packages] = {
+    "ruby1.9.1"     => "1.9.2.290-2",
+    "ruby1.9.1-dev" => "1.9.2.290-2"
+  }
 when "debian"
-  default[:system_ruby][:package]         = "ruby"
-  default[:system_ruby][:package_version] = "4.8"
+  default[:system_ruby][:packages] = {
+    "ruby1.8"     => "1.8.7.358-4",
+    "ruby1.8=dev" => "1.8.7.358-4",
+    "rubygems"    => "1.8.15-1"
 end
 
 default[:system_ruby][:rbenv_version]     = nil
