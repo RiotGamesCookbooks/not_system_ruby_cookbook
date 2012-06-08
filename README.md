@@ -14,7 +14,6 @@ private Ruby for Chef, this is not a valid assumption.
 
 # Attributes
 
-* `system_ruby[:package]`          - Package to install (default: platform specific, highest version available)
-* `system_ruby[:package_version]`  - Version to install (default: platform specific, highest version available)
+* `system_ruby[:packages]`         - Hash of packages and versions to install (default: platform specific, highest available)
 * `system_ruby[:rbenv_version]`    - Version to install via rbenv globally (requires rbenv cookbook ~>1.3.1)
 
