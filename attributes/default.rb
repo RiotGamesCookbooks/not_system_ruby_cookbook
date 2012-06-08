@@ -42,6 +42,7 @@ when "debian"
     "ruby1.8"     => "1.8.7.358-4",
     "ruby1.8-dev" => "1.8.7.358-4",
     "rubygems"    => "1.8.15-1"
+  }
 end
 
 default[:system_ruby][:rbenv_version]     = nil
