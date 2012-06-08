@@ -19,9 +19,6 @@
 # limitations under the License.
 #
 
-ruby ruby-libs ruby-devel ruby-docs ruby-ri ruby-irb ruby-rdoc ruby-mode rubygems
-
-
 case node[:platform]
 when "fedora"
   default[:system_ruby][:packages] = {
