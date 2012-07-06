@@ -23,7 +23,7 @@ compiletime = node[:system_ruby][:compiletime]
 
 # on apt-based platforms when first provisioning we need to force
 # apt-get update at compiletime if we are going to try to install at compiletime
-if node['platform_family'] == "debian"
+if node[:platform_family] == "debian"
   execute "apt-get update" do
     action :nothing
     not_if do
