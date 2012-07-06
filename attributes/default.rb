@@ -45,4 +45,5 @@ when "debian"
   }
 end
 
+default[:system_ruby][:compiletime]       = true
 default[:system_ruby][:rbenv_version]     = nil
