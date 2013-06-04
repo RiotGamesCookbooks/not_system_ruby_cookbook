@@ -3,4 +3,4 @@ maintainer_email "michael.ivey@riotgames.com"
 license          "Apache 2.0"
 description      "Installs Ruby"
 
-version          "0.1.4"
+version          IO.read(File.join(File.dirname(__FILE__), 'VERSION')) rescue "0.0.1"
