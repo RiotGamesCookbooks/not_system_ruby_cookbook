@@ -1,3 +1,4 @@
+name             "not_system_ruby"
 maintainer       "Riot Games"
 maintainer_email "michael.ivey@riotgames.com"
 license          "Apache 2.0"
